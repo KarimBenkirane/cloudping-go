@@ -21,7 +21,7 @@ func loadRegions() (Regions, error) {
 	return regions, nil
 }
 
-func filterRegions(providers []string, codes []string) ([]Region, error) {
+func FilterRegions(providers []string, codes []string) ([]Region, error) {
 	allRegions, err := loadRegions()
 	if err != nil {
 		return nil, err
