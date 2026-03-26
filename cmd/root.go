@@ -11,8 +11,8 @@ import (
 )
 
 var (
-	Providers []string
-	Codes     []string
+	providers []string
+	codes     []string
 )
 
 // rootCmd represents the base command when called without any subcommands
@@ -46,8 +46,8 @@ func init() {
 	// will be global for your application.
 
 	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.cloudping-go.yaml)")
-	rootCmd.PersistentFlags().StringSliceVar(&Providers, "providers", nil, "Providers (eg. aws, gcp, azure)")
-	rootCmd.PersistentFlags().StringSliceVar(&Codes, "codes", nil, "Codes (eg. us-east-1)")
+	rootCmd.PersistentFlags().StringSliceVar(&providers, "providers", nil, "Providers (eg. aws, gcp, azure)")
+	rootCmd.PersistentFlags().StringSliceVar(&codes, "codes", nil, "Codes (eg. us-east-1)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.

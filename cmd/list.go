@@ -6,13 +6,13 @@ package cmd
 import (
 	"log"
 
+	"github.com/KarimBenkirane/cloudping-go/pinger"
+
 	"github.com/spf13/cobra"
 
 	"github.com/fatih/color"
 
 	"github.com/rodaine/table"
-
-	"github.com/KarimBenkirane/cloudping-go/pinger"
 )
 
 // listCmd represents the list command
@@ -29,9 +29,9 @@ to quickly create a Cobra application.`,
 }
 
 func runList(cmd *cobra.Command, args []string) {
-	regions, err := pinger.FilterRegions(Providers, Codes)
+	regions, err := pinger.FilterRegions(providers, codes)
 	if err != nil {
-		log.Fatal("An error occured while getting the regions.")
+		log.Fatal(err)
 	}
 	headerFmt := color.New(color.FgGreen, color.Underline).SprintfFunc()
 	columnFmt := color.New(color.FgYellow).SprintfFunc()

@@ -4,8 +4,11 @@ Copyright © 2026 Mohamed Karim Benkirane <benkiranemedkarim@gmail.com>
 package cmd
 
 import (
-	"fmt"
+	"log"
 
+	"github.com/KarimBenkirane/cloudping-go/pinger"
+	"github.com/fatih/color"
+	"github.com/rodaine/table"
 	"github.com/spf13/cobra"
 )
 
@@ -19,9 +22,30 @@ and usage of using your command. For example:
 Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("ping called")
-	},
+	Run: runPing,
+}
+
+func runPing(cmd *cobra.Command, args []string) {
+	regions, err := pinger.FilterRegions(providers, codes)
+	if err != nil {
+		log.Fatal(err)
+	}
+	results := pinger.Ping(regions)
+	printTable(results)
+}
+
+func printTable(results []pinger.Result) {
+	headerFmt := color.New(color.FgGreen, color.Underline).SprintfFunc()
+	columnFmt := color.New(color.FgYellow).SprintfFunc()
+
+	tbl := table.New("Region", "Latency(ms)", "Status")
+	tbl.WithHeaderFormatter(headerFmt).WithFirstColumnFormatter(columnFmt)
+
+	for _, result := range results {
+		tbl.AddRow(result.Region.Code, result.Latency, result.Status)
+	}
+
+	tbl.Print()
 }
 
 func init() {
