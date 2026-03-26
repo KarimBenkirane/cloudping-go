@@ -31,7 +31,7 @@ func FilterRegions(providers []string, codes []string) ([]Region, error) {
 		return allRegions, nil
 	}
 
-	result := make([]Region, 0, len(allRegions))
+	result := make(Regions, 0, len(allRegions))
 
 	for _, region := range allRegions {
 		pMatch := len(providers) == 0 || slices.Contains(providers, region.Provider)

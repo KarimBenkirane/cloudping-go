@@ -18,13 +18,13 @@ import (
 // listCmd represents the list command
 var listCmd = &cobra.Command{
 	Use:   "list",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+	Short: "List all supported cloud regions",
+	Long: `Display a comprehensive list of all AWS, GCP, and Azure regions 
+available for testing. You can filter the list by provider or region code 
+to verify which endpoints are currently configured in the tool.
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+Example:
+  cloudping-go list --providers gcp`,
 	Run: runList,
 }
 

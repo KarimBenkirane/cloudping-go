@@ -15,13 +15,14 @@ import (
 // pingCmd represents the ping command
 var pingCmd = &cobra.Command{
 	Use:   "ping",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+	Short: "Measure HTTP latency to cloud regions",
+	Long: `Execute latency tests against global cloud endpoints (AWS, GCP, Azure). 
+This command measures the round-robin time (RTT) to the nearest entry points 
+of various cloud providers, helping you identify the fastest region from 
+your current network location.
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+Example:
+  cloudping-go ping --providers aws --regions us-east-1,us-west-2`,
 	Run: runPing,
 }
 

@@ -9,7 +9,7 @@ func getCurrentTime() time.Time {
 	return time.Now()
 }
 
-func PingRegion(region Region) Result {
+func pingRegion(region Region) Result {
 	startTime := getCurrentTime()
 	_, err := http.Head(region.Url)
 	endTime := time.Since(startTime).Milliseconds()
@@ -20,10 +20,10 @@ func PingRegion(region Region) Result {
 
 }
 
-func Ping(regions []Region) []Result {
+func Ping(regions Regions) []Result {
 	results := make([]Result, 0, len(regions))
 	for _, region := range regions {
-		result := PingRegion(region)
+		result := pingRegion(region)
 		results = append(results, result)
 	}
 	return results
