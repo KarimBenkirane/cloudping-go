@@ -1,0 +1,622 @@
+[
+  {
+    "provider": "aws",
+    "name": "US East (N. Virginia)",
+    "code": "us-east-1",
+    "url": "https://dynamodb.us-east-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "US East (Ohio)",
+    "code": "us-east-2",
+    "url": "https://dynamodb.us-east-2.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "US West (N. California)",
+    "code": "us-west-1",
+    "url": "https://dynamodb.us-west-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "US West (Oregon)",
+    "code": "us-west-2",
+    "url": "https://dynamodb.us-west-2.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Africa (Cape Town)",
+    "code": "af-south-1",
+    "url": "https://dynamodb.af-south-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Asia Pacific (Hong Kong)",
+    "code": "ap-east-1",
+    "url": "https://dynamodb.ap-east-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Asia Pacific (Jakarta)",
+    "code": "ap-southeast-3",
+    "url": "https://dynamodb.ap-southeast-3.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Asia Pacific (Melbourne)",
+    "code": "ap-southeast-4",
+    "url": "https://dynamodb.ap-southeast-4.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Asia Pacific (Mumbai)",
+    "code": "ap-south-1",
+    "url": "https://dynamodb.ap-south-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Asia Pacific (Hyderabad)",
+    "code": "ap-south-2",
+    "url": "https://dynamodb.ap-south-2.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Asia Pacific (Osaka)",
+    "code": "ap-northeast-3",
+    "url": "https://dynamodb.ap-northeast-3.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Asia Pacific (Seoul)",
+    "code": "ap-northeast-2",
+    "url": "https://dynamodb.ap-northeast-2.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Asia Pacific (Singapore)",
+    "code": "ap-southeast-1",
+    "url": "https://dynamodb.ap-southeast-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Asia Pacific (Sydney)",
+    "code": "ap-southeast-2",
+    "url": "https://dynamodb.ap-southeast-2.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Asia Pacific (Tokyo)",
+    "code": "ap-northeast-1",
+    "url": "https://dynamodb.ap-northeast-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Canada (Central)",
+    "code": "ca-central-1",
+    "url": "https://dynamodb.ca-central-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Canada West (Calgary)",
+    "code": "ca-west-1",
+    "url": "https://dynamodb.ca-west-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Europe (Frankfurt)",
+    "code": "eu-central-1",
+    "url": "https://dynamodb.eu-central-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Europe (Zurich)",
+    "code": "eu-central-2",
+    "url": "https://dynamodb.eu-central-2.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Europe (Ireland)",
+    "code": "eu-west-1",
+    "url": "https://dynamodb.eu-west-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Europe (London)",
+    "code": "eu-west-2",
+    "url": "https://dynamodb.eu-west-2.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Europe (Milan)",
+    "code": "eu-south-1",
+    "url": "https://dynamodb.eu-south-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Europe (Spain)",
+    "code": "eu-south-2",
+    "url": "https://dynamodb.eu-south-2.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Europe (Paris)",
+    "code": "eu-west-3",
+    "url": "https://dynamodb.eu-west-3.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Europe (Stockholm)",
+    "code": "eu-north-1",
+    "url": "https://dynamodb.eu-north-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Israel (Tel Aviv)",
+    "code": "il-central-1",
+    "url": "https://dynamodb.il-central-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Middle East (Bahrain)",
+    "code": "me-south-1",
+    "url": "https://dynamodb.me-south-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "Middle East (UAE)",
+    "code": "me-central-1",
+    "url": "https://dynamodb.me-central-1.amazonaws.com"
+  },
+  {
+    "provider": "aws",
+    "name": "South America (São Paulo)",
+    "code": "sa-east-1",
+    "url": "https://dynamodb.sa-east-1.amazonaws.com"
+  },
+
+  {
+    "provider": "gcp",
+    "name": "Iowa",
+    "code": "us-central1",
+    "url": "https://compute.us-central1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "South Carolina",
+    "code": "us-east1",
+    "url": "https://compute.us-east1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Northern Virginia",
+    "code": "us-east4",
+    "url": "https://compute.us-east4.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Columbus",
+    "code": "us-east5",
+    "url": "https://compute.us-east5.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Dallas",
+    "code": "us-south1",
+    "url": "https://compute.us-south1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Oregon",
+    "code": "us-west1",
+    "url": "https://compute.us-west1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Los Angeles",
+    "code": "us-west2",
+    "url": "https://compute.us-west2.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Salt Lake City",
+    "code": "us-west3",
+    "url": "https://compute.us-west3.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Las Vegas",
+    "code": "us-west4",
+    "url": "https://compute.us-west4.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Montreal",
+    "code": "northamerica-northeast1",
+    "url": "https://compute.northamerica-northeast1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Toronto",
+    "code": "northamerica-northeast2",
+    "url": "https://compute.northamerica-northeast2.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "São Paulo",
+    "code": "southamerica-east1",
+    "url": "https://compute.southamerica-east1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Santiago",
+    "code": "southamerica-west1",
+    "url": "https://compute.southamerica-west1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Warsaw",
+    "code": "europe-central2",
+    "url": "https://compute.europe-central2.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Finland",
+    "code": "europe-north1",
+    "url": "https://compute.europe-north1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Madrid",
+    "code": "europe-southwest1",
+    "url": "https://compute.europe-southwest1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Belgium",
+    "code": "europe-west1",
+    "url": "https://compute.europe-west1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "London",
+    "code": "europe-west2",
+    "url": "https://compute.europe-west2.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Frankfurt",
+    "code": "europe-west3",
+    "url": "https://compute.europe-west3.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Netherlands",
+    "code": "europe-west4",
+    "url": "https://compute.europe-west4.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Zurich",
+    "code": "europe-west6",
+    "url": "https://compute.europe-west6.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Milan",
+    "code": "europe-west8",
+    "url": "https://compute.europe-west8.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Paris",
+    "code": "europe-west9",
+    "url": "https://compute.europe-west9.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Berlin",
+    "code": "europe-west10",
+    "url": "https://compute.europe-west10.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Turin",
+    "code": "europe-west12",
+    "url": "https://compute.europe-west12.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Taiwan",
+    "code": "asia-east1",
+    "url": "https://compute.asia-east1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Hong Kong",
+    "code": "asia-east2",
+    "url": "https://compute.asia-east2.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Tokyo",
+    "code": "asia-northeast1",
+    "url": "https://compute.asia-northeast1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Osaka",
+    "code": "asia-northeast2",
+    "url": "https://compute.asia-northeast2.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Seoul",
+    "code": "asia-northeast3",
+    "url": "https://compute.asia-northeast3.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Mumbai",
+    "code": "asia-south1",
+    "url": "https://compute.asia-south1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Delhi",
+    "code": "asia-south2",
+    "url": "https://compute.asia-south2.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Singapore",
+    "code": "asia-southeast1",
+    "url": "https://compute.asia-southeast1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Jakarta",
+    "code": "asia-southeast2",
+    "url": "https://compute.asia-southeast2.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Sydney",
+    "code": "australia-southeast1",
+    "url": "https://compute.australia-southeast1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Melbourne",
+    "code": "australia-southeast2",
+    "url": "https://compute.australia-southeast2.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Doha",
+    "code": "me-central1",
+    "url": "https://compute.me-central1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Dammam",
+    "code": "me-central2",
+    "url": "https://compute.me-central2.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Tel Aviv",
+    "code": "me-west1",
+    "url": "https://compute.me-west1.googleapis.com/generate_204"
+  },
+  {
+    "provider": "gcp",
+    "name": "Johannesburg",
+    "code": "africa-south1",
+    "url": "https://compute.africa-south1.googleapis.com/generate_204"
+  },
+
+  {
+    "provider": "azure",
+    "name": "East US",
+    "code": "eastus",
+    "url": "https://eastus.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "East US 2",
+    "code": "eastus2",
+    "url": "https://eastus2.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "South Central US",
+    "code": "southcentralus",
+    "url": "https://southcentralus.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "West US 2",
+    "code": "westus2",
+    "url": "https://westus2.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "West US 3",
+    "code": "westus3",
+    "url": "https://westus3.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Central US",
+    "code": "centralus",
+    "url": "https://centralus.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "North Central US",
+    "code": "northcentralus",
+    "url": "https://northcentralus.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "West US",
+    "code": "westus",
+    "url": "https://westus.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "West Central US",
+    "code": "westcentralus",
+    "url": "https://westcentralus.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Canada Central",
+    "code": "canadacentral",
+    "url": "https://canadacentral.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Canada East",
+    "code": "canadaeast",
+    "url": "https://canadaeast.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Brazil South",
+    "code": "brazilsouth",
+    "url": "https://brazilsouth.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "North Europe",
+    "code": "northeurope",
+    "url": "https://northeurope.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "West Europe",
+    "code": "westeurope",
+    "url": "https://westeurope.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "France Central",
+    "code": "francecentral",
+    "url": "https://francecentral.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Germany West Central",
+    "code": "germanywestcentral",
+    "url": "https://germanywestcentral.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Norway East",
+    "code": "norwayeast",
+    "url": "https://norwayeast.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Sweden Central",
+    "code": "swedencentral",
+    "url": "https://swedencentral.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Switzerland North",
+    "code": "switzerlandnorth",
+    "url": "https://switzerlandnorth.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "UK South",
+    "code": "uksouth",
+    "url": "https://uksouth.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "UK West",
+    "code": "ukwest",
+    "url": "https://ukwest.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "South Africa North",
+    "code": "southafricanorth",
+    "url": "https://southafricanorth.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "UAE North",
+    "code": "uaenorth",
+    "url": "https://uaenorth.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Central India",
+    "code": "centralindia",
+    "url": "https://centralindia.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "South India",
+    "code": "southindia",
+    "url": "https://southindia.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "West India",
+    "code": "westindia",
+    "url": "https://westindia.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "East Asia",
+    "code": "eastasia",
+    "url": "https://eastasia.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Southeast Asia",
+    "code": "southeastasia",
+    "url": "https://southeastasia.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Japan East",
+    "code": "japaneast",
+    "url": "https://japaneast.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Japan West",
+    "code": "japanwest",
+    "url": "https://japanwest.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Korea Central",
+    "code": "koreacentral",
+    "url": "https://koreacentral.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Korea South",
+    "code": "koreasouth",
+    "url": "https://koreasouth.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Australia East",
+    "code": "australiaeast",
+    "url": "https://australiaeast.blob.core.windows.net"
+  },
+  {
+    "provider": "azure",
+    "name": "Australia Southeast",
+    "code": "australiasoutheast",
+    "url": "https://australiasoutheast.blob.core.windows.net"
+  }
+]
