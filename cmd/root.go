@@ -39,8 +39,8 @@ func init() {
 	// will be global for your application.
 
 	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.cloudping-go.yaml)")
-	rootCmd.PersistentFlags().StringSliceVar(&providers, "providers", nil, "Providers (eg. aws, gcp, azure)")
-	rootCmd.PersistentFlags().StringSliceVar(&codes, "codes", nil, "Codes (eg. us-east-1)")
+	rootCmd.PersistentFlags().StringSliceVarP(&providers, "providers", "p", nil, "Providers (eg. aws, gcp, azure)")
+	rootCmd.PersistentFlags().StringSliceVarP(&codes, "codes", "c", nil, "Codes (eg. us-east-1)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.

@@ -63,5 +63,5 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// pingCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-	pingCmd.Flags().Int64VarP(&pingCount, "count", "c", 3, "Define the amount of times to ping the server (the result will be the average of those pings)")
+	pingCmd.Flags().Int64VarP(&pingCount, "count", "n", 3, "Define the amount of times to ping the server (the result will be the average of those pings)")
 }
