@@ -6,7 +6,7 @@ package cmd
 import (
 	"log"
 
-	"github.com/KarimBenkirane/cloudping-go/pinger"
+	"github.com/KarimBenkirane/cloudping-go/internal/pinger"
 
 	"github.com/spf13/cobra"
 

@@ -6,7 +6,20 @@ import (
 	"slices"
 )
 
+type Region struct {
+	Provider string
+	Name     string
+	Code     string
+	Url      string
+}
+
 type Regions []Region
+
+type Result struct {
+	Region  Region
+	Latency int64
+	Status  string
+}
 
 func loadRegions() (Regions, error) {
 	var regions Regions
