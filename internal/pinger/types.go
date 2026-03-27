@@ -1,10 +1,14 @@
 package pinger
 
 import (
+	_ "embed"
 	"encoding/json"
-	"os"
 	"slices"
+	"strings"
 )
+
+//go:embed regions.json
+var regionsJson string
 
 type Region struct {
 	Provider string
@@ -22,19 +26,15 @@ type Result struct {
 }
 
 func loadRegions() (Regions, error) {
-	var regions Regions
-	data, err := os.ReadFile("regions.json")
-	if err != nil {
-		return regions, err
+	dec := json.NewDecoder(strings.NewReader(regionsJson))
+	var r Regions
+	if err := dec.Decode(&r); err != nil {
+		return nil, err
 	}
-	err = json.Unmarshal(data, &regions)
-	if err != nil {
-		return regions, err
-	}
-	return regions, nil
+	return r, nil
 }
 
-func FilterRegions(providers []string, codes []string) ([]Region, error) {
+func FilterRegions(providers []string, codes []string) (Regions, error) {
 	allRegions, err := loadRegions()
 	if err != nil {
 		return nil, err
