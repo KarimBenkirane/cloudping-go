@@ -8,23 +8,26 @@ import (
 
 var client http.Client = http.Client{Timeout: 3 * time.Second}
 
-func pingRegion(region Region) Result {
+func pingRegion(region Region, times int64) Result {
 
 	// Warmup to avoid DNS & TLS time in the next call
-	err := helper(region.Url)
-	if err != nil {
+	if err := helper(region.Url); err != nil {
 		return Result{Region: region, Latency: 0, Status: err.Error()}
 	}
 
 	// Calculate the latency
-	startTime := time.Now()
-	err = helper(region.Url)
-	if err != nil {
-		return Result{Region: region, Latency: 0, Status: err.Error()}
+	var totalDuration time.Duration
+	for i := 0; i < int(times); i++ {
+		startTime := time.Now()
+		if err := helper(region.Url); err != nil {
+			return Result{Region: region, Latency: 0, Status: err.Error()}
+		}
+		totalDuration += time.Since(startTime)
 	}
-	endTime := time.Since(startTime)
 
-	return Result{Region: region, Latency: endTime.Milliseconds(), Status: "success"}
+	avgDuration := totalDuration / time.Duration(times)
+
+	return Result{Region: region, Latency: avgDuration.Milliseconds(), Status: "success"}
 
 }
 
@@ -42,10 +45,10 @@ func helper(url string) error {
 	return nil
 }
 
-func Ping(regions Regions) []Result {
+func Ping(regions Regions, times int64) []Result {
 	results := make([]Result, 0, len(regions))
 	for _, region := range regions {
-		result := pingRegion(region)
+		result := pingRegion(region, times)
 		results = append(results, result)
 	}
 	return results

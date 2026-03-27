@@ -12,6 +12,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var pingCount int64
+
 // pingCmd represents the ping command
 var pingCmd = &cobra.Command{
 	Use:   "ping",
@@ -31,7 +33,7 @@ func runPing(cmd *cobra.Command, args []string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	results := pinger.Ping(regions)
+	results := pinger.Ping(regions, pingCount)
 	printTable(results)
 }
 
@@ -61,4 +63,5 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// pingCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	pingCmd.Flags().Int64VarP(&pingCount, "count", "c", 3, "Define the amount of times to ping the server (the result will be the average of those pings)")
 }
