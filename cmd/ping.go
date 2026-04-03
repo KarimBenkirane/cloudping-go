@@ -5,10 +5,12 @@ package cmd
 
 import (
 	"log"
+	"sort"
 
 	"github.com/KarimBenkirane/cloudping-go/internal/pinger"
 	"github.com/fatih/color"
 	"github.com/rodaine/table"
+	"github.com/schollz/progressbar/v3"
 	"github.com/spf13/cobra"
 )
 
@@ -33,19 +35,30 @@ func runPing(cmd *cobra.Command, args []string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	results := pinger.Ping(regions, pingCount)
+
+	results := make([]pinger.Result, 0)
+	bar := progressbar.Default(int64(len(regions)), "Pinging servers...")
+
+	for _, region := range regions {
+		results = append(results, pinger.PingRegion(region, pingCount))
+		bar.Add(1)
+	}
+	sort.Slice(results, func(i, j int) bool {
+		return results[i].Latency <= results[j].Latency
+	})
 	printTable(results)
+
 }
 
 func printTable(results []pinger.Result) {
 	headerFmt := color.New(color.FgGreen, color.Underline).SprintfFunc()
 	columnFmt := color.New(color.FgYellow).SprintfFunc()
 
-	tbl := table.New("Region", "Latency(ms)", "Status")
+	tbl := table.New("Provider", "Name", "Code", "Latency (ms)", "Status")
 	tbl.WithHeaderFormatter(headerFmt).WithFirstColumnFormatter(columnFmt)
 
 	for _, result := range results {
-		tbl.AddRow(result.Region.Code, result.Latency, result.Status)
+		tbl.AddRow(result.Region.Provider, result.Region.Name, result.Region.Code, result.Latency, result.Status)
 	}
 
 	tbl.Print()

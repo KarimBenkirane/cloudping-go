@@ -8,7 +8,7 @@ import (
 
 var client http.Client = http.Client{Timeout: 3 * time.Second}
 
-func pingRegion(region Region, times int64) Result {
+func PingRegion(region Region, times int64) Result {
 
 	// Warmup to avoid DNS & TLS time in the next call
 	if err := helper(region.Url); err != nil {
@@ -43,13 +43,4 @@ func helper(url string) error {
 	defer res.Body.Close()
 	io.Copy(io.Discard, res.Body) // Read the body until EOF to "re-use a persistent TCP connection to the server for a subsequent "keep-alive" request."
 	return nil
-}
-
-func Ping(regions Regions, times int64) []Result {
-	results := make([]Result, 0, len(regions))
-	for _, region := range regions {
-		result := pingRegion(region, times)
-		results = append(results, result)
-	}
-	return results
 }
