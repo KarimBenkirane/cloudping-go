@@ -73,7 +73,7 @@ func printTable(results []pinger.Result) {
 		if result.Latency > 0 && result.Latency < 80 {
 			latencyColor = color.GreenString("%d", result.Latency) // Green
 		} else if result.Latency >= 80 && result.Latency <= 200 {
-			latencyColor = color.RGB(255, 128, 0).Sprintf("%d", result.Latency) // Orange
+			latencyColor = color.YellowString("%d", result.Latency) // Yellow
 		} else {
 			latencyColor = color.RedString("%d", result.Latency) // Red
 		}
