@@ -58,7 +58,15 @@ func printTable(results []pinger.Result) {
 	tbl.WithHeaderFormatter(headerFmt).WithFirstColumnFormatter(columnFmt)
 
 	for _, result := range results {
-		tbl.AddRow(result.Region.Provider, result.Region.Name, result.Region.Code, result.Latency, result.Status)
+		var latencyColor string
+		if result.Latency > 0 && result.Latency < 80 {
+			latencyColor = color.GreenString("%d", result.Latency) // Green
+		} else if result.Latency >= 80 && result.Latency <= 200 {
+			latencyColor = color.RGB(255, 128, 0).Sprintf("%d", result.Latency) // Orange
+		} else {
+			latencyColor = color.RedString("%d", result.Latency) // Red
+		}
+		tbl.AddRow(result.Region.Provider, result.Region.Name, result.Region.Code, latencyColor, result.Status)
 	}
 
 	tbl.Print()
