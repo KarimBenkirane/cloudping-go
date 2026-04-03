@@ -6,6 +6,7 @@ package cmd
 import (
 	"log"
 	"sort"
+	"sync"
 
 	"github.com/KarimBenkirane/cloudping-go/internal/pinger"
 	"github.com/fatih/color"
@@ -30,6 +31,9 @@ Example:
 	Run: runPing,
 }
 
+var sema = make(chan struct{}, 5) // semaphore for 5 workers
+var wg sync.WaitGroup
+
 func runPing(cmd *cobra.Command, args []string) {
 	regions, err := pinger.FilterRegions(providers, codes)
 	if err != nil {
@@ -40,9 +44,16 @@ func runPing(cmd *cobra.Command, args []string) {
 	bar := progressbar.Default(int64(len(regions)), "Pinging servers...")
 
 	for _, region := range regions {
-		results = append(results, pinger.PingRegion(region, pingCount))
-		bar.Add(1)
+		wg.Go(
+			func() {
+				sema <- struct{}{}
+				result := pinger.PingRegion(region, pingCount)
+				<-sema
+				results = append(results, result)
+				bar.Add(1)
+			})
 	}
+	wg.Wait()
 	sort.Slice(results, func(i, j int) bool {
 		return results[i].Latency <= results[j].Latency
 	})
