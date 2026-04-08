@@ -11,17 +11,17 @@ import (
 )
 
 var (
-	providers []string
-	codes     []string
+	providers   []string
+	regionsFlag []string
 )
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "cloudping-go",
-	Short: "A multi-cloud latency testing tool",
-	Long: `cloudping-go is a CLI utility written in Go 
-that allows users to benchmark their network connection against 
-the world's leading cloud infrastructures.`,
+	Short: "A multi-cloud network latency benchmarking CLI",
+	Long: `cloudping-go is a high-performance command-line tool designed to measure 
+the true network latency between your machine and physical cloud data centers 
+worldwide. It currently supports native endpoints for AWS, Google Cloud, and Azure.`,
 }
 
 func Execute() {
@@ -32,6 +32,6 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.PersistentFlags().StringSliceVarP(&providers, "providers", "p", nil, "Providers (eg. aws,gcp,azure)")
-	rootCmd.PersistentFlags().StringSliceVarP(&codes, "codes", "c", nil, "Codes (eg. us-east-1)")
+	rootCmd.PersistentFlags().StringSliceVarP(&providers, "providers", "p", nil, "Filter by cloud provider(s) (comma-separated, e.g., aws,gcp)")
+	rootCmd.PersistentFlags().StringSliceVarP(&regionsFlag, "regions", "r", nil, "Filter by region name(s) (comma-separated, e.g., us-east-1,europe-west9)")
 }

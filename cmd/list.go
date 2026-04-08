@@ -18,18 +18,21 @@ import (
 // listCmd represents the list command
 var listCmd = &cobra.Command{
 	Use:   "list",
-	Short: "List all supported cloud regions",
-	Long: `Display a comprehensive list of all AWS, GCP, and Azure regions 
-available for testing. You can filter the list by provider or region code 
-to verify which endpoints are currently configured in the tool.
+	Short: "Display all supported cloud providers and regions",
+	Long: `Print a comprehensive, formatted table of all active AWS, GCP, and Azure 
+regions available for latency testing. 
 
-Example:
-  cloudping-go list --providers gcp`,
+Use this command to quickly find the exact Region strings needed for the ping 
+command's '--regions' filter, or to verify the endpoint URLs being tested.
+
+Examples:
+  cloudping-go list --providers azure
+  cloudping-go list --regions us-east-1,eu-west-1`,
 	Run: runList,
 }
 
 func runList(cmd *cobra.Command, args []string) {
-	regions, err := pinger.FilterRegions(providers, codes)
+	regions, err := pinger.FilterRegions(providers, regionsFlag)
 	if err != nil {
 		log.Fatal(err)
 	}

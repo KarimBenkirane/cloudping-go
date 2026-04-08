@@ -20,14 +20,18 @@ var pingCount int64
 // pingCmd represents the ping command
 var pingCmd = &cobra.Command{
 	Use:   "ping",
-	Short: "Measure HTTP latency to cloud regions",
-	Long: `Execute latency tests against global cloud endpoints (AWS, GCP, Azure). 
-This command measures the round-robin time (RTT) to the nearest entry points 
-of various cloud providers, helping you identify the fastest region from 
-your current network location.
+	Short: "Measure HTTP-based Round-Trip Time (RTT) to cloud regions",
+	Long: `Execute parallel latency tests against actual cloud data centers. 
 
-Example:
-  cloudping-go ping --providers aws --regions us-east-1,us-west-2`,
+This command dispatches highly-optimized, cache-busting HTTP requests directly 
+to region-locked endpoints. By bypassing global edge networks, it reveals the 
+true physical Round-Trip Time (RTT) to the requested servers. Results are 
+automatically sorted from fastest to slowest.
+
+Examples:
+  cloudping-go ping
+  cloudping-go ping --providers aws,gcp
+  cloudping-go ping --regions us-east-1,europe-west9 -n 5`,
 	Run: runPing,
 }
 
@@ -35,7 +39,7 @@ var sema = make(chan struct{}, 5) // semaphore for 5 workers
 var wg sync.WaitGroup
 
 func runPing(cmd *cobra.Command, args []string) {
-	regions, err := pinger.FilterRegions(providers, codes)
+	regions, err := pinger.FilterRegions(providers, regionsFlag)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -85,5 +89,5 @@ func printTable(results []pinger.Result) {
 
 func init() {
 	rootCmd.AddCommand(pingCmd)
-	pingCmd.Flags().Int64VarP(&pingCount, "count", "t", 3, "Define the amount of times to ping the server (the result will be the average of those pings)")
+	pingCmd.Flags().Int64VarP(&pingCount, "count", "n", 3, "Number of times to ping each region (results are averaged)")
 }
