@@ -1,9 +1,11 @@
 package pinger
 
 import (
+	"errors"
 	"fmt"
 	"io"
 	"net/http"
+	"net/url"
 	"time"
 )
 
@@ -31,13 +33,16 @@ func PingRegion(region Region, times int64) Result {
 
 }
 
-func helper(url string) error {
-	req, err := http.NewRequest(http.MethodGet, url, nil)
+func helper(u string) error {
+	req, err := http.NewRequest(http.MethodGet, u, nil)
 	if err != nil {
 		return err
 	}
 	res, err := client.Do(req)
 	if err != nil {
+		if err.(*url.Error).Timeout() {
+			return errors.New("timeout")
+		}
 		return err
 	}
 	defer res.Body.Close()
