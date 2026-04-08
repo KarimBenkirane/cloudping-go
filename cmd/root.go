@@ -32,6 +32,6 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.PersistentFlags().StringSliceVarP(&providers, "providers", "p", nil, "Providers (eg. aws, gcp, azure)")
+	rootCmd.PersistentFlags().StringSliceVarP(&providers, "providers", "p", nil, "Providers (eg. aws,gcp,azure)")
 	rootCmd.PersistentFlags().StringSliceVarP(&codes, "codes", "c", nil, "Codes (eg. us-east-1)")
 }

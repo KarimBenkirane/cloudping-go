@@ -85,5 +85,5 @@ func printTable(results []pinger.Result) {
 
 func init() {
 	rootCmd.AddCommand(pingCmd)
-	pingCmd.Flags().Int64VarP(&pingCount, "count", "n", 3, "Define the amount of times to ping the server (the result will be the average of those pings)")
+	pingCmd.Flags().Int64VarP(&pingCount, "count", "t", 3, "Define the amount of times to ping the server (the result will be the average of those pings)")
 }
