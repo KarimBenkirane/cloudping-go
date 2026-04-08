@@ -61,7 +61,7 @@ func runPing(cmd *cobra.Command, args []string) {
 	wg.Wait()
 	results := store.All()
 	sort.Slice(results, func(i, j int) bool {
-		return results[i].Latency <= results[j].Latency
+		return results[i].Latency < results[j].Latency
 	})
 	printTable(results)
 
