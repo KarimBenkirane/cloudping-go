@@ -1,6 +1,7 @@
 package pinger
 
 import (
+	"fmt"
 	"io"
 	"net/http"
 	"time"
@@ -14,7 +15,6 @@ func PingRegion(region Region, times int64) Result {
 	if err := helper(region.Url); err != nil {
 		return Result{Region: region, Latency: 0, Status: err.Error()}
 	}
-
 	// Calculate the latency
 	var totalDuration time.Duration
 	for i := 0; i < int(times); i++ {
@@ -41,6 +41,9 @@ func helper(url string) error {
 		return err
 	}
 	defer res.Body.Close()
-	io.Copy(io.Discard, res.Body) // Read the body until EOF to "re-use a persistent TCP connection to the server for a subsequent "keep-alive" request."
+	if res.StatusCode != http.StatusOK {
+		return fmt.Errorf("HTTP %d", res.StatusCode)
+	}
+	io.Copy(io.Discard, res.Body)
 	return nil
 }
