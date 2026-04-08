@@ -151,18 +151,6 @@
   },
   {
     "provider": "aws",
-    "name": "Israel (Tel Aviv)",
-    "code": "il-central-1",
-    "url": "https://dynamodb.il-central-1.amazonaws.com"
-  },
-  {
-    "provider": "aws",
-    "name": "Middle East (Bahrain)",
-    "code": "me-south-1",
-    "url": "https://dynamodb.me-south-1.amazonaws.com"
-  },
-  {
-    "provider": "aws",
     "name": "Middle East (UAE)",
     "code": "me-central-1",
     "url": "https://dynamodb.me-central-1.amazonaws.com"
@@ -385,12 +373,6 @@
   },
   {
     "provider": "gcp",
-    "name": "Tel Aviv",
-    "code": "me-west1",
-    "url": "https://me-west1-5tkroniexa-zf.a.run.app"
-  },
-  {
-    "provider": "gcp",
     "name": "Montréal",
     "code": "northamerica-northeast1",
     "url": "https://northamerica-northeast1-5tkroniexa-nn.a.run.app"
@@ -473,208 +455,293 @@
     "code": "us-west4",
     "url": "https://us-west4-5tkroniexa-wn.a.run.app"
   },
+
   {
     "provider": "azure",
-    "name": "East US",
-    "code": "eastus",
-    "url": "https://eastus.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "East US 2",
-    "code": "eastus2",
-    "url": "https://eastus2.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "South Central US",
-    "code": "southcentralus",
-    "url": "https://southcentralus.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "West US 2",
-    "code": "westus2",
-    "url": "https://westus2.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "West US 3",
-    "code": "westus3",
-    "url": "https://westus3.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "Central US",
-    "code": "centralus",
-    "url": "https://centralus.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "North Central US",
-    "code": "northcentralus",
-    "url": "https://northcentralus.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "West US",
-    "code": "westus",
-    "url": "https://westus.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "West Central US",
-    "code": "westcentralus",
-    "url": "https://westcentralus.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "Canada Central",
-    "code": "canadacentral",
-    "url": "https://canadacentral.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "Canada East",
-    "code": "canadaeast",
-    "url": "https://canadaeast.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "Brazil South",
-    "code": "brazilsouth",
-    "url": "https://brazilsouth.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "North Europe",
-    "code": "northeurope",
-    "url": "https://northeurope.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "West Europe",
-    "code": "westeurope",
-    "url": "https://westeurope.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "France Central",
-    "code": "francecentral",
-    "url": "https://francecentral.blob.core.windows.net"
+    "name": "Australia Southeast",
+    "code": "australiasoutheast",
+    "url": "https://q9australiasoutheast.blob.core.windows.net/public/latency-test.json"
   },
   {
     "provider": "azure",
     "name": "Germany West Central",
     "code": "germanywestcentral",
-    "url": "https://germanywestcentral.blob.core.windows.net"
+    "url": "https://s8germanywestcentral.blob.core.windows.net/public/latency-test.json"
   },
   {
     "provider": "azure",
-    "name": "Norway East",
-    "code": "norwayeast",
-    "url": "https://norwayeast.blob.core.windows.net"
+    "name": "Australia Central",
+    "code": "australiacentral",
+    "url": "https://s3australiacentral.blob.core.windows.net/public/latency-test.json"
   },
   {
     "provider": "azure",
-    "name": "Sweden Central",
-    "code": "swedencentral",
-    "url": "https://swedencentral.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "Switzerland North",
-    "code": "switzerlandnorth",
-    "url": "https://switzerlandnorth.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "UK South",
-    "code": "uksouth",
-    "url": "https://uksouth.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "UK West",
-    "code": "ukwest",
-    "url": "https://ukwest.blob.core.windows.net"
+    "name": "Indonesia Central",
+    "code": "indonesiacentral",
+    "url": "https://q9indonesiacentral.blob.core.windows.net/public/latency-test.json"
   },
   {
     "provider": "azure",
     "name": "South Africa North",
     "code": "southafricanorth",
-    "url": "https://southafricanorth.blob.core.windows.net"
+    "url": "https://q9southafricanorth.blob.core.windows.net/public/latency-test.json"
   },
   {
     "provider": "azure",
-    "name": "UAE North",
-    "code": "uaenorth",
-    "url": "https://uaenorth.blob.core.windows.net"
+    "name": "Switzerland North",
+    "code": "switzerlandnorth",
+    "url": "https://q9switzerlandnorth.blob.core.windows.net/public/latency-test.json"
   },
   {
     "provider": "azure",
-    "name": "Central India",
-    "code": "centralindia",
-    "url": "https://centralindia.blob.core.windows.net"
+    "name": "New Zealand North",
+    "code": "newzealandnorth",
+    "url": "https://q9newzealandnorth.blob.core.windows.net/public/latency-test.json"
   },
   {
     "provider": "azure",
-    "name": "South India",
-    "code": "southindia",
-    "url": "https://southindia.blob.core.windows.net"
+    "name": "Belgium Central",
+    "code": "belgiumcentral",
+    "url": "https://s8belgiumcentral.blob.core.windows.net/public/latency-test.json"
   },
   {
     "provider": "azure",
-    "name": "West India",
-    "code": "westindia",
-    "url": "https://westindia.blob.core.windows.net"
+    "name": "North Central US",
+    "code": "northcentralus",
+    "url": "https://s3northcentralus.blob.core.windows.net/public/latency-test.json"
   },
   {
     "provider": "azure",
-    "name": "East Asia",
-    "code": "eastasia",
-    "url": "https://eastasia.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "Southeast Asia",
-    "code": "southeastasia",
-    "url": "https://southeastasia.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "Japan East",
-    "code": "japaneast",
-    "url": "https://japaneast.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "Japan West",
-    "code": "japanwest",
-    "url": "https://japanwest.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "Korea Central",
-    "code": "koreacentral",
-    "url": "https://koreacentral.blob.core.windows.net"
-  },
-  {
-    "provider": "azure",
-    "name": "Korea South",
-    "code": "koreasouth",
-    "url": "https://koreasouth.blob.core.windows.net"
+    "name": "South Central US",
+    "code": "southcentralus",
+    "url": "https://s3southcentralus.blob.core.windows.net/public/latency-test.json"
   },
   {
     "provider": "azure",
     "name": "Australia East",
     "code": "australiaeast",
-    "url": "https://australiaeast.blob.core.windows.net"
+    "url": "https://s8australiaeast.blob.core.windows.net/public/latency-test.json"
   },
   {
     "provider": "azure",
-    "name": "Australia Southeast",
-    "code": "australiasoutheast",
-    "url": "https://australiasoutheast.blob.core.windows.net"
+    "name": "Canada Central",
+    "code": "canadacentral",
+    "url": "https://s3canadacentral.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "France Central",
+    "code": "francecentral",
+    "url": "https://s3francecentral.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Israel Central",
+    "code": "israelcentral",
+    "url": "https://s3israelcentral.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Mexico Central",
+    "code": "mexicocentral",
+    "url": "https://s8mexicocentral.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Poland Central",
+    "code": "polandcentral",
+    "url": "https://s3polandcentral.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Southeast Asia",
+    "code": "southeastasia",
+    "url": "https://s8southeastasia.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Sweden Central",
+    "code": "swedencentral",
+    "url": "https://s8swedencentral.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "West Central US",
+    "code": "westcentralus",
+    "url": "https://s3westcentralus.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Central India",
+    "code": "centralindia",
+    "url": "https://q9centralindia.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Chile Central",
+    "code": "chilecentral",
+    "url": "https://s8chilecentral.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Korea Central",
+    "code": "koreacentral",
+    "url": "https://s8koreacentral.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Malaysia West",
+    "code": "malaysiawest",
+    "url": "https://s3malaysiawest.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Qatar Central",
+    "code": "qatarcentral",
+    "url": "https://s8qatarcentral.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Spain Central",
+    "code": "spaincentral",
+    "url": "https://s3spaincentral.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Austria East",
+    "code": "austriaeast",
+    "url": "https://s3austriaeast.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Brazil South",
+    "code": "brazilsouth",
+    "url": "https://q9brazilsouth.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Denmark East",
+    "code": "denmarkeast",
+    "url": "https://q9denmarkeast.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "North Europe",
+    "code": "northeurope",
+    "url": "https://s8northeurope.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Canada East",
+    "code": "canadaeast",
+    "url": "https://s8canadaeast.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Italy North",
+    "code": "italynorth",
+    "url": "https://s8italynorth.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Korea South",
+    "code": "koreasouth",
+    "url": "https://q9koreasouth.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Norway East",
+    "code": "norwayeast",
+    "url": "https://q9norwayeast.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "South India",
+    "code": "southindia",
+    "url": "https://q9southindia.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "West Europe",
+    "code": "westeurope",
+    "url": "https://s8westeurope.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Central US",
+    "code": "centralus",
+    "url": "https://s3centralus.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Japan East",
+    "code": "japaneast",
+    "url": "https://q9japaneast.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "Japan West",
+    "code": "japanwest",
+    "url": "https://s3japanwest.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "West India",
+    "code": "westindia",
+    "url": "https://q9westindia.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "East Asia",
+    "code": "eastasia",
+    "url": "https://s3eastasia.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "UAE North",
+    "code": "uaenorth",
+    "url": "https://s3uaenorth.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "East US 2",
+    "code": "eastus2",
+    "url": "https://q9eastus2.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "UK South",
+    "code": "uksouth",
+    "url": "https://s8uksouth.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "West US 2",
+    "code": "westus2",
+    "url": "https://s8westus2.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "West US 3",
+    "code": "westus3",
+    "url": "https://q9westus3.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "East US",
+    "code": "eastus",
+    "url": "https://s8eastus.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "UK West",
+    "code": "ukwest",
+    "url": "https://q9ukwest.blob.core.windows.net/public/latency-test.json"
+  },
+  {
+    "provider": "azure",
+    "name": "West US",
+    "code": "westus",
+    "url": "https://s3westus.blob.core.windows.net/public/latency-test.json"
   }
 ]
