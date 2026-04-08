@@ -4,6 +4,10 @@ A simple CLI to measure real HTTP round-trip latency from your machine to cloud 
 
 `cloudping-go` sends direct requests to region-specific endpoints for AWS, GCP, and Azure, then sorts results from fastest to slowest.
 
+## Demo
+
+![cloudping-go demo](demo.gif)
+
 ## Features
 
 - Ping many cloud regions in parallel
