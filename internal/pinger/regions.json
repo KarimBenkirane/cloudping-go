@@ -173,248 +173,306 @@
     "code": "sa-east-1",
     "url": "https://dynamodb.sa-east-1.amazonaws.com"
   },
-
   {
-    "provider": "gcp",
-    "name": "Iowa",
-    "code": "us-central1",
-    "url": "https://compute.us-central1.googleapis.com/generate_204"
+    "provider": "aws",
+    "name": "Asia Pacific (Malaysia)",
+    "code": "ap-southeast-5",
+    "url": "https://dynamodb.ap-southeast-5.amazonaws.com"
   },
   {
-    "provider": "gcp",
-    "name": "South Carolina",
-    "code": "us-east1",
-    "url": "https://compute.us-east1.googleapis.com/generate_204"
+    "provider": "aws",
+    "name": "Asia Pacific (New Zealand)",
+    "code": "ap-southeast-6",
+    "url": "https://dynamodb.ap-southeast-6.amazonaws.com"
   },
   {
-    "provider": "gcp",
-    "name": "Northern Virginia",
-    "code": "us-east4",
-    "url": "https://compute.us-east4.googleapis.com/generate_204"
+    "provider": "aws",
+    "name": "Asia Pacific (Taipei)",
+    "code": "ap-east-2",
+    "url": "https://dynamodb.ap-east-2.amazonaws.com"
   },
   {
-    "provider": "gcp",
-    "name": "Columbus",
-    "code": "us-east5",
-    "url": "https://compute.us-east5.googleapis.com/generate_204"
+    "provider": "aws",
+    "name": "Asia Pacific (Thailand)",
+    "code": "ap-southeast-7",
+    "url": "https://dynamodb.ap-southeast-7.amazonaws.com"
   },
   {
-    "provider": "gcp",
-    "name": "Dallas",
-    "code": "us-south1",
-    "url": "https://compute.us-south1.googleapis.com/generate_204"
+    "provider": "aws",
+    "name": "Mexico (Central)",
+    "code": "mx-central-1",
+    "url": "https://dynamodb.mx-central-1.amazonaws.com"
   },
   {
-    "provider": "gcp",
-    "name": "Oregon",
-    "code": "us-west1",
-    "url": "https://compute.us-west1.googleapis.com/generate_204"
+    "provider": "aws",
+    "name": "AWS GovCloud (US-East)",
+    "code": "us-gov-east-1",
+    "url": "https://dynamodb.us-gov-east-1.amazonaws.com"
   },
   {
-    "provider": "gcp",
-    "name": "Los Angeles",
-    "code": "us-west2",
-    "url": "https://compute.us-west2.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Salt Lake City",
-    "code": "us-west3",
-    "url": "https://compute.us-west3.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Las Vegas",
-    "code": "us-west4",
-    "url": "https://compute.us-west4.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Montreal",
-    "code": "northamerica-northeast1",
-    "url": "https://compute.northamerica-northeast1.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Toronto",
-    "code": "northamerica-northeast2",
-    "url": "https://compute.northamerica-northeast2.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "São Paulo",
-    "code": "southamerica-east1",
-    "url": "https://compute.southamerica-east1.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Santiago",
-    "code": "southamerica-west1",
-    "url": "https://compute.southamerica-west1.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Warsaw",
-    "code": "europe-central2",
-    "url": "https://compute.europe-central2.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Finland",
-    "code": "europe-north1",
-    "url": "https://compute.europe-north1.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Madrid",
-    "code": "europe-southwest1",
-    "url": "https://compute.europe-southwest1.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Belgium",
-    "code": "europe-west1",
-    "url": "https://compute.europe-west1.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "London",
-    "code": "europe-west2",
-    "url": "https://compute.europe-west2.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Frankfurt",
-    "code": "europe-west3",
-    "url": "https://compute.europe-west3.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Netherlands",
-    "code": "europe-west4",
-    "url": "https://compute.europe-west4.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Zurich",
-    "code": "europe-west6",
-    "url": "https://compute.europe-west6.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Milan",
-    "code": "europe-west8",
-    "url": "https://compute.europe-west8.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Paris",
-    "code": "europe-west9",
-    "url": "https://compute.europe-west9.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Berlin",
-    "code": "europe-west10",
-    "url": "https://compute.europe-west10.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Turin",
-    "code": "europe-west12",
-    "url": "https://compute.europe-west12.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Taiwan",
-    "code": "asia-east1",
-    "url": "https://compute.asia-east1.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Hong Kong",
-    "code": "asia-east2",
-    "url": "https://compute.asia-east2.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Tokyo",
-    "code": "asia-northeast1",
-    "url": "https://compute.asia-northeast1.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Osaka",
-    "code": "asia-northeast2",
-    "url": "https://compute.asia-northeast2.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Seoul",
-    "code": "asia-northeast3",
-    "url": "https://compute.asia-northeast3.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Mumbai",
-    "code": "asia-south1",
-    "url": "https://compute.asia-south1.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Delhi",
-    "code": "asia-south2",
-    "url": "https://compute.asia-south2.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Singapore",
-    "code": "asia-southeast1",
-    "url": "https://compute.asia-southeast1.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Jakarta",
-    "code": "asia-southeast2",
-    "url": "https://compute.asia-southeast2.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Sydney",
-    "code": "australia-southeast1",
-    "url": "https://compute.australia-southeast1.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Melbourne",
-    "code": "australia-southeast2",
-    "url": "https://compute.australia-southeast2.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Doha",
-    "code": "me-central1",
-    "url": "https://compute.me-central1.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Dammam",
-    "code": "me-central2",
-    "url": "https://compute.me-central2.googleapis.com/generate_204"
-  },
-  {
-    "provider": "gcp",
-    "name": "Tel Aviv",
-    "code": "me-west1",
-    "url": "https://compute.me-west1.googleapis.com/generate_204"
+    "provider": "aws",
+    "name": "AWS GovCloud (US-West)",
+    "code": "us-gov-west-1",
+    "url": "https://dynamodb.us-gov-west-1.amazonaws.com"
   },
   {
     "provider": "gcp",
     "name": "Johannesburg",
     "code": "africa-south1",
-    "url": "https://compute.africa-south1.googleapis.com/generate_204"
+    "url": "https://africa-south1-5tkroniexa-bq.a.run.app"
   },
-
+  {
+    "provider": "gcp",
+    "name": "Taiwan",
+    "code": "asia-east1",
+    "url": "https://asia-east1-5tkroniexa-de.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Hong Kong",
+    "code": "asia-east2",
+    "url": "https://asia-east2-5tkroniexa-df.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Tokyo",
+    "code": "asia-northeast1",
+    "url": "https://asia-northeast1-5tkroniexa-an.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Osaka",
+    "code": "asia-northeast2",
+    "url": "https://asia-northeast2-5tkroniexa-dt.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Seoul",
+    "code": "asia-northeast3",
+    "url": "https://asia-northeast3-5tkroniexa-du.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Mumbai",
+    "code": "asia-south1",
+    "url": "https://asia-south1-5tkroniexa-el.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Delhi",
+    "code": "asia-south2",
+    "url": "https://asia-south2-5tkroniexa-em.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Singapore",
+    "code": "asia-southeast1",
+    "url": "https://asia-southeast1-5tkroniexa-as.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Jakarta",
+    "code": "asia-southeast2",
+    "url": "https://asia-southeast2-5tkroniexa-et.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Bangkok",
+    "code": "asia-southeast3",
+    "url": "https://asia-southeast3-5tkroniexa-eu.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Sydney",
+    "code": "australia-southeast1",
+    "url": "https://australia-southeast1-5tkroniexa-ts.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Melbourne",
+    "code": "australia-southeast2",
+    "url": "https://australia-southeast2-5tkroniexa-km.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Warsaw",
+    "code": "europe-central2",
+    "url": "https://europe-central2-5tkroniexa-lm.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Finland",
+    "code": "europe-north1",
+    "url": "https://europe-north1-5tkroniexa-lz.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Stockholm",
+    "code": "europe-north2",
+    "url": "https://europe-north2-5tkroniexa-ma.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Madrid",
+    "code": "europe-southwest1",
+    "url": "https://europe-southwest1-5tkroniexa-no.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Belgium",
+    "code": "europe-west1",
+    "url": "https://europe-west1-5tkroniexa-ew.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Berlin",
+    "code": "europe-west10",
+    "url": "https://europe-west10-5tkroniexa-oe.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Turin",
+    "code": "europe-west12",
+    "url": "https://europe-west12-5tkroniexa-og.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "London",
+    "code": "europe-west2",
+    "url": "https://europe-west2-5tkroniexa-nw.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Frankfurt",
+    "code": "europe-west3",
+    "url": "https://europe-west3-5tkroniexa-ey.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Netherlands",
+    "code": "europe-west4",
+    "url": "https://europe-west4-5tkroniexa-ez.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Zurich",
+    "code": "europe-west6",
+    "url": "https://europe-west6-5tkroniexa-oa.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Milan",
+    "code": "europe-west8",
+    "url": "https://europe-west8-5tkroniexa-oc.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Paris",
+    "code": "europe-west9",
+    "url": "https://europe-west9-5tkroniexa-od.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Doha",
+    "code": "me-central1",
+    "url": "https://me-central1-5tkroniexa-ww.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Dammam",
+    "code": "me-central2",
+    "url": "https://me-central2-5tkroniexa-wx.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Tel Aviv",
+    "code": "me-west1",
+    "url": "https://me-west1-5tkroniexa-zf.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Montréal",
+    "code": "northamerica-northeast1",
+    "url": "https://northamerica-northeast1-5tkroniexa-nn.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Toronto",
+    "code": "northamerica-northeast2",
+    "url": "https://northamerica-northeast2-5tkroniexa-pd.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "México",
+    "code": "northamerica-south1",
+    "url": "https://northamerica-south1-5tkroniexa-pv.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "São Paulo",
+    "code": "southamerica-east1",
+    "url": "https://southamerica-east1-5tkroniexa-rj.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Santiago",
+    "code": "southamerica-west1",
+    "url": "https://southamerica-west1-5tkroniexa-tl.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Iowa",
+    "code": "us-central1",
+    "url": "https://us-central1-5tkroniexa-uc.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "South Carolina",
+    "code": "us-east1",
+    "url": "https://us-east1-5tkroniexa-ue.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "North Virginia",
+    "code": "us-east4",
+    "url": "https://us-east4-5tkroniexa-uk.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Columbus",
+    "code": "us-east5",
+    "url": "https://us-east5-5tkroniexa-ul.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Dallas",
+    "code": "us-south1",
+    "url": "https://us-south1-5tkroniexa-vp.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Oregon",
+    "code": "us-west1",
+    "url": "https://us-west1-5tkroniexa-uw.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Los Angeles",
+    "code": "us-west2",
+    "url": "https://us-west2-5tkroniexa-wl.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Salt Lake City",
+    "code": "us-west3",
+    "url": "https://us-west3-5tkroniexa-wm.a.run.app"
+  },
+  {
+    "provider": "gcp",
+    "name": "Las Vegas",
+    "code": "us-west4",
+    "url": "https://us-west4-5tkroniexa-wn.a.run.app"
+  },
   {
     "provider": "azure",
     "name": "East US",
