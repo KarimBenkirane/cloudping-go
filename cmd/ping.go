@@ -44,7 +44,8 @@ func runPing(cmd *cobra.Command, args []string) {
 		log.Fatal(err)
 	}
 
-	results := make([]pinger.Result, 0)
+	store := &pinger.ResultStore{}
+
 	bar := progressbar.Default(int64(len(regions)), "Pinging servers...")
 
 	for _, region := range regions {
@@ -53,11 +54,12 @@ func runPing(cmd *cobra.Command, args []string) {
 				sema <- struct{}{}
 				result := pinger.PingRegion(region, pingCount)
 				<-sema
-				results = append(results, result)
+				store.Add(result)
 				bar.Add(1)
 			})
 	}
 	wg.Wait()
+	results := store.All()
 	sort.Slice(results, func(i, j int) bool {
 		return results[i].Latency <= results[j].Latency
 	})

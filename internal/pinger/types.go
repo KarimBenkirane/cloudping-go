@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"slices"
 	"strings"
+	"sync"
 )
 
 //go:embed regions.json
@@ -23,6 +24,26 @@ type Result struct {
 	Region  Region
 	Latency int64
 	Status  string
+}
+
+type ResultStore struct {
+	mu      sync.RWMutex
+	results []Result
+}
+
+func (rs *ResultStore) Add(result Result) {
+	rs.mu.Lock()
+	defer rs.mu.Unlock()
+	rs.results = append(rs.results, result)
+}
+
+func (rs *ResultStore) All() []Result {
+	rs.mu.RLock()
+	defer rs.mu.RUnlock()
+
+	res := make([]Result, len(rs.results))
+	copy(res, rs.results)
+	return res
 }
 
 func loadRegions() (Regions, error) {
