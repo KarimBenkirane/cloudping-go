@@ -4,6 +4,7 @@ Copyright © 2026 Mohamed Karim Benkirane <benkiranemedkarim@gmail.com>
 package cmd
 
 import (
+	"fmt"
 	"log"
 	"sort"
 	"sync"
@@ -15,7 +16,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var pingCount int64
+var pingCount int
 
 // pingCmd represents the ping command
 var pingCmd = &cobra.Command{
@@ -32,6 +33,12 @@ Examples:
   cloudping-go ping
   cloudping-go ping --providers aws,gcp
   cloudping-go ping --regions us-east-1,europe-west9 -n 5`,
+	PreRunE: func(cmd *cobra.Command, args []string) error {
+		if pingCount == 0 {
+			return fmt.Errorf("Count cannot be 0!")
+		}
+		return nil
+	},
 	Run: runPing,
 }
 
@@ -61,6 +68,12 @@ func runPing(cmd *cobra.Command, args []string) {
 	wg.Wait()
 	results := store.All()
 	sort.Slice(results, func(i, j int) bool {
+		if results[i].Status == "success" && results[j].Status != "success" {
+			return true
+		}
+		if results[i].Status != "success" && results[j].Status == "success" {
+			return false
+		}
 		return results[i].Latency < results[j].Latency
 	})
 	printTable(results)
@@ -91,5 +104,6 @@ func printTable(results []pinger.Result) {
 
 func init() {
 	rootCmd.AddCommand(pingCmd)
-	pingCmd.Flags().Int64VarP(&pingCount, "count", "n", 3, "Number of times to ping each region (results are averaged)")
+	rootCmd.SilenceUsage = true
+	pingCmd.Flags().IntVarP(&pingCount, "count", "n", 3, "Number of times to ping each region (results are averaged)")
 }

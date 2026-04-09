@@ -104,17 +104,19 @@ cloudping-go ping --regions us-east-1,europe-west9 -n 5
 
 ## References
 
+- https://github.com/GoogleCloudPlatform/gcping
+- https://global.gcping.com/api/endpoints
+- https://docs.aws.amazon.com/general/latest/gr/ddb.html
+- https://www.azurespeed.com/
 - https://gitlab.com/leonhard-llc/cloudping.info/
 - https://pkg.go.dev/net/http
 - https://pkg.go.dev/embed
 - https://pkg.go.dev/time
 - https://pkg.go.dev/encoding/json
-- https://github.com/GoogleCloudPlatform/gcping
-- https://global.gcping.com/api/endpoints
 - https://github.com/schollz/progressbar
+- https://github.com/fatih/color
+- https://github.com/rodaine/table
 - https://github.com/spf13/cobra
-- https://www.azurespeed.com/
-- https://docs.aws.amazon.com/general/latest/gr/ddb.html
 
 ## License
 

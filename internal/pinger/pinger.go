@@ -11,18 +11,18 @@ import (
 
 var client http.Client = http.Client{Timeout: 3 * time.Second}
 
-func PingRegion(region Region, times int64) Result {
+func PingRegion(region Region, times int) Result {
 
 	// Warmup to avoid DNS & TLS time in the next call
 	if err := helper(region.Url); err != nil {
-		return Result{Region: region, Latency: 0, Status: err.Error()}
+		return Result{Region: region, Latency: -1, Status: err.Error()}
 	}
 	// Calculate the latency
 	var totalDuration time.Duration
-	for i := 0; i < int(times); i++ {
+	for i := 0; i < times; i++ {
 		startTime := time.Now()
 		if err := helper(region.Url); err != nil {
-			return Result{Region: region, Latency: 0, Status: err.Error()}
+			return Result{Region: region, Latency: -1, Status: err.Error()}
 		}
 		totalDuration += time.Since(startTime)
 	}

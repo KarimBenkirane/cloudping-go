@@ -5,7 +5,9 @@ Copyright © 2026 Mohamed Karim Benkirane <benkiranemedkarim@gmail.com>
 package cmd
 
 import (
+	"fmt"
 	"os"
+	"strings"
 
 	"github.com/spf13/cobra"
 )
@@ -17,6 +19,18 @@ var (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
+	PersistentPreRunE: func(cmd *cobra.Command, args []string) error {
+		for i := range len(providers) {
+			p := providers[i]
+			if strings.ToLower(p) != "aws" && strings.ToLower(p) != "gcp" && strings.ToLower(p) != "azure" {
+				return fmt.Errorf("Invalid provider: %s", p)
+			} else {
+				providers[i] = strings.ToLower(p)
+			}
+		}
+
+		return nil
+	},
 	Use:   "cloudping-go",
 	Short: "A multi-cloud network latency benchmarking CLI",
 	Long: `cloudping-go is a high-performance command-line tool designed to measure 
